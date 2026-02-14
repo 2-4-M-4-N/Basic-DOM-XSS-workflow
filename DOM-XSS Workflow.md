@@ -66,7 +66,10 @@ URL (#<script>alert('XSS')</script>) --> JS: window.location.hash --> userInput 
 innerHTML = "আপনার নাম: " + userInput --> DOM এ ইনসার্ট --> ব্রাউজার পার্স করে --> স্ক্রিপ্ট এক্সিকিউট
 ```
 
-(নোট: মডার্ন ব্রাউজারে innerHTML সরাসরি <script> এক্সিকিউট না করতে পারে, তাই অল্টারনেটিভ পেলোড যেমন <img src="x" onerror="alert('XSS')"> ব্যবহার করা যায়।)
+(নোট: মডার্ন ব্রাউজারে innerHTML সরাসরি <script> এক্সিকিউট না করতে পারে, তাই অল্টারনেটিভ পেলোড যেমন 
+```
+<img src="x" onerror="alert('XSS')"> ```
+ব্যবহার করা যায়।)
 
 ### স্টেপ ৪: এক্সিকিউশন এবং আউটপুট (Execution and Output)
 
